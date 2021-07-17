@@ -56,6 +56,7 @@
     <script type="text/javascript">
         var API_URL = 'https://hezxo55b8l.execute-api.us-east-1.amazonaws.com/items';
         var uniqid = Date.now();
+        console.log(uniqid);
 
         $(document).ready(function(){
             $.ajax({
@@ -77,7 +78,7 @@
             $.ajax({
                 type: 'PUT',
                 url: API_URL,
-                data: JSON.stringify({"id": 'uniqid', "name": $('#prd').val(),"price": $('#qty').val()}),
+                data: JSON.stringify({"id": uniqid.toString(), "name": $('#prd').val(),"price": $('#qty').val()}),
                 contentType: "application/json",
 
                 success: function(data){
