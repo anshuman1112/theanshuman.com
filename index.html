@@ -32,7 +32,7 @@
 
     </section>
 
-    <section class="course">
+    <section class="contact">
         <h1>New Page</h1>
         <p>New Line dsjh  huh  o uih o oi hooigj pdjf pq jgei ije </p>
         <h1>Inventory Details:</h1>
@@ -52,17 +52,10 @@
         </form>
         </section>
 
-
-
-
-    <!--
-    
-
-    -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         var API_URL = 'https://hezxo55b8l.execute-api.us-east-1.amazonaws.com/items';
+        var uniqid = Date.now();
 
         $(document).ready(function(){
             $.ajax({
@@ -84,7 +77,7 @@
             $.ajax({
                 type: 'PUT',
                 url: API_URL,
-                data: JSON.stringify({"id": '3', "name": $('#prd').val(),"price": $('#qty').val()}),
+                data: JSON.stringify({"id": id, "name": $('#prd').val(),"price": $('#qty').val()}),
                 contentType: "application/json",
 
                 success: function(data){
