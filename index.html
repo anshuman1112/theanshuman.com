@@ -77,7 +77,7 @@
             $.ajax({
                 type: 'PUT',
                 url: API_URL,
-                data: JSON.stringify({"id": id, "name": $('#prd').val(),"price": $('#qty').val()}),
+                data: JSON.stringify({"id": uniqid, "name": $('#prd').val(),"price": $('#qty').val()}),
                 contentType: "application/json",
 
                 success: function(data){
